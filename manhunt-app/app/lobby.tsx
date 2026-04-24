@@ -6,7 +6,6 @@ import { AppShell } from "@/components/AppShell";
 import { InfoCard } from "@/components/InfoCard";
 import { LobbyJoinCard } from "@/components/LobbyJoinCard";
 import { PlayerList } from "@/components/PlayerList";
-import { layoutStyles } from "@/components/styles/layoutStyles";
 import { lobbyStyles } from "@/components/styles/lobbyStyles";
 import { api } from "@/convex/_generated/api";
 import { getOrCreateStoredIdentity, readStoredIdentity } from "@/lib/identity";

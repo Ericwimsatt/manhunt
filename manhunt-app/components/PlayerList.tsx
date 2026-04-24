@@ -5,13 +5,13 @@ import { layoutStyles } from "@/components/styles/layoutStyles";
 import { lobbyStyles } from "@/components/styles/lobbyStyles";
 
 type PlayerListProps = {
-  players: Array<{
+  players: {
     id: string;
     identityKey: string;
     name: string;
     team: "hiders" | "seekers" | "unassigned";
     status: "connected" | "disconnected";
-  }>;
+  }[];
   currentIdentityKey: string | null;
 };
 
