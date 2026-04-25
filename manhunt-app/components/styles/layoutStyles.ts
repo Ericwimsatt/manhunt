@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-import { colors, radius, shadows, spacing, typography } from "./tokens";
+import { colors, radius, spacing, typography } from "./tokens";
 
 export const layoutStyles = StyleSheet.create({
   screen: {
@@ -25,7 +25,6 @@ export const layoutStyles = StyleSheet.create({
     borderColor: colors.border,
     padding: spacing.xl,
     gap: spacing.md,
-    ...shadows.card,
   },
   heroEyebrow: {
     fontSize: typography.eyebrow,

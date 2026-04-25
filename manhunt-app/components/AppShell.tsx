@@ -1,4 +1,4 @@
-import { Link } from "expo-router";
+import { useRouter } from "expo-router";
 import { PropsWithChildren } from "react";
 import { Pressable, ScrollView, Text, View } from "react-native";
 
@@ -25,6 +25,8 @@ export function AppShell({
   title,
   description,
 }: AppShellProps) {
+  const router = useRouter();
+
   return (
     <ScrollView contentContainerStyle={layoutStyles.screenContent} style={layoutStyles.screen}>
       <View style={layoutStyles.shell}>
@@ -37,18 +39,25 @@ export function AppShell({
               const isActive = link.href === currentRoute;
 
               return (
-                <Link href={link.href} key={link.href} asChild>
-                  <Pressable style={[layoutStyles.navButton, isActive && layoutStyles.navButtonActive]}>
-                    <Text
-                      style={[
-                        layoutStyles.navButtonLabel,
-                        isActive && layoutStyles.navButtonLabelActive,
-                      ]}
-                    >
-                      {link.label}
-                    </Text>
-                  </Pressable>
-                </Link>
+                <Pressable
+                  key={link.href}
+                  onPress={() => router.push(link.href)}
+                  style={
+                    isActive
+                      ? [layoutStyles.navButton, layoutStyles.navButtonActive]
+                      : layoutStyles.navButton
+                  }
+                >
+                  <Text
+                    style={
+                      isActive
+                        ? [layoutStyles.navButtonLabel, layoutStyles.navButtonLabelActive]
+                        : layoutStyles.navButtonLabel
+                    }
+                  >
+                    {link.label}
+                  </Text>
+                </Pressable>
               );
             })}
           </View>

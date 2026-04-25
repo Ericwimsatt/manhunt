@@ -12,7 +12,6 @@ export const colors = {
   unassigned: "#8a6a2f",
   connected: "#2d7f55",
   disconnected: "#8d8d85",
-  shadow: "rgba(59, 38, 20, 0.14)",
 };
 
 export const spacing = {
@@ -39,12 +38,3 @@ export const typography = {
   hero: 36,
 };
 
-export const shadows = {
-  card: {
-    shadowColor: colors.shadow,
-    shadowOpacity: 1,
-    shadowRadius: 24,
-    shadowOffset: { width: 0, height: 16 },
-    elevation: 4,
-  },
-};

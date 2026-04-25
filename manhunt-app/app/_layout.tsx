@@ -6,7 +6,7 @@ import { AppProviders } from "@/components/AppProviders";
 export default function RootLayout() {
   return (
     <AppProviders>
-      <StatusBar style="dark" />
+      <StatusBar />
       <Stack
         screenOptions={{
           headerShown: false,

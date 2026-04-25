@@ -49,7 +49,7 @@ export function LobbyJoinCard({
       <View style={lobbyStyles.buttonRow}>
         <Pressable
           onPress={onJoin}
-          style={[lobbyStyles.button, joinDisabled && lobbyStyles.buttonDisabled]}
+          style={joinDisabled ? [lobbyStyles.button, lobbyStyles.buttonDisabled] : lobbyStyles.button}
         >
           <Text style={lobbyStyles.buttonLabel}>{isJoining ? "Joining..." : hasJoined ? "Update name" : "Join lobby"}</Text>
         </Pressable>
@@ -60,7 +60,7 @@ export function LobbyJoinCard({
         ) : null}
       </View>
 
-      <View style={[lobbyStyles.notice, errorMessage ? lobbyStyles.noticeError : null]}>
+      <View style={errorMessage ? [lobbyStyles.notice, lobbyStyles.noticeError] : lobbyStyles.notice}>
         <Text style={lobbyStyles.noticeText}>
           {errorMessage ??
             (hasJoined
