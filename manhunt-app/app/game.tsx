@@ -10,7 +10,7 @@ export default function GameScreen() {
       title="Game"
     >
       <InfoCard
-        body="Use this route for active objective updates, timers, or map clues. It is scaffolded now so navigation and shared styling are already in place."
+        body="Use this route for active objective updates, timers, or map clues."
         title="In-game information"
       />
     </AppShell>
