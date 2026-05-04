@@ -32,7 +32,7 @@ export function LobbyJoinCard({
         <Text style={lobbyStyles.sectionLabel}>Join the game</Text>
         <Text style={lobbyStyles.sectionTitle}>Choose a name and enter the lobby.</Text>
         <Text style={lobbyStyles.mutedText}>
-          No account required. This browser keeps your anonymous device identity so refreshes reconnect you as the same player.
+          No account required.
         </Text>
       </View>
 
